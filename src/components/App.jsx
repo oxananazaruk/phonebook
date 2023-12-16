@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading, selectError, selectContacts } from '../redux/selectors';
 import { fetchContacts } from '../redux/operations'
+import { refreshUser } from '../redux/auth/operations';
+import { useAuth } from '../hooks';
 
 
 
@@ -17,6 +19,12 @@ export const App = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const contacts = useSelector(selectContacts);
+
+  const { isRefreshing } = useAuth();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
 
   useEffect(() => {
