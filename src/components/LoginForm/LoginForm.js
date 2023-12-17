@@ -16,7 +16,7 @@ const formSchema = Yup.object().shape({
   password: Yup.string().min(7, 'Too Short!').required('Required'),
 });
 
-export const LogintForm = () => {
+export const LoginForm = () => {
   const dispatch = useDispatch();
 
   return (
