@@ -15,7 +15,7 @@ import { selectContacts } from '../../redux/selectors';
 
 const formSchema = Yup.object().shape({
   name: Yup.string().min(2, 'Too Short!').required('Required'),
-  phone: Yup.string()
+  number: Yup.string()
     .matches(
       /^(\d{2,}-\d{2,}-\d{2,}|\d{2,}-\d{2,}|\d{5,})$/,
       'Phone number is not valid. Min 7 numbers (101-01-01)'
@@ -30,7 +30,7 @@ export const ContactForm = () => {
   return (
     <FormContainer>
       <Formik
-        initialValues={{ name: '', phone: '' }}
+        initialValues={{ name: '', number: '' }}
         validationSchema={formSchema}
         onSubmit={(values, actions) => {
           if (
@@ -55,8 +55,8 @@ export const ContactForm = () => {
 
           <FormGroup>
             Number
-            <Field type="tel" name="phone" />
-            <ErrorMessage name="phone" component="span" />
+            <Field type="tel" name="number" />
+            <ErrorMessage name="number" component="span" />
           </FormGroup>
 
           <FormButton type="submit">Add contact</FormButton>
