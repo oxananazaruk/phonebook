@@ -26,7 +26,7 @@ export default function Contacts() {
       <h1>Phonebook</h1>
       <ContactForm />
       <Helmet>
-        <title>Your tasks</title>
+        <title>Your contacts</title>
       </Helmet>
       <Filter />
       {isLoading && !error && <b>Request in progress...</b>}
