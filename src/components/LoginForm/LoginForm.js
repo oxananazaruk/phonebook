@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import toast from 'react-hot-toast';
 import {
   IconWrap,
   LogTitle,
@@ -13,7 +14,6 @@ import {
   FormButton,
   MainLink,
 } from './LogintForm.styled';
-import { Error } from '../Error/Error';
 import { selectError } from '../../redux/auth/selectors';
 import { CiLock } from 'react-icons/ci';
 
@@ -64,11 +64,10 @@ export const LoginForm = () => {
         </Formik>
         <MainLink to="/register">Don't have an account? Register</MainLink>
       </FormContainer>
-      {error && (
-        <Error>
-          Something went wrong! Please check your details and try again.
-        </Error>
-      )}
+      {error &&
+        toast.error(
+          'Something went wrong! Please check your details and try again.'
+        )}
     </>
   );
 };
