@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/operations';
 import { useAuth } from '../../hooks';
-import { Wraper, UserName } from './UserMenu.styled';
+import { Wraper, UserName, LogOutBtn } from './UserMenu.styled';
+import { IoExitOutline } from 'react-icons/io5';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -10,9 +11,15 @@ export const UserMenu = () => {
   return (
     <Wraper>
       <UserName>Welcome, {user.name}</UserName>
-      <button type="button" onClick={() => dispatch(logOut())}>
+      <LogOutBtn type="button" onClick={() => dispatch(logOut())}>
         Logout
-      </button>
+        <IoExitOutline
+          style={{
+            width: '40px',
+            height: '20px',
+          }}
+        />
+      </LogOutBtn>
     </Wraper>
   );
 };

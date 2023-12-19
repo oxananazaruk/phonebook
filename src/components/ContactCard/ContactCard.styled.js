@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const DeleteBtn = styled.button`
-  display: block;
   min-width: 60px;
   color: ${p => p.theme.colors.black};
   background-color: ${p => p.theme.colors.gray};
@@ -12,6 +11,9 @@ export const DeleteBtn = styled.button`
   font-weight: 400;
   font-size: 12px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: ${p => p.theme.colors.blue};
