@@ -5,6 +5,23 @@ import {
 } from 'formik';
 import styled from 'styled-components';
 
+export const IconWrap = styled.div`
+  width: 60px;
+  height: 60px;
+  background-color: ${p => p.theme.colors.lightblue};
+  border-radius: 50%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const LogTitle = styled.h2`
+  margin: 0 auto;
+  text-align: center;
+`;
+
 export const FormContainer = styled.div`
   max-width: 600px;
   padding: 16px 32px;
@@ -18,8 +35,10 @@ export const Form = styled(FormikForm)`
 `;
 
 export const Field = styled(FormikField)`
-  padding: 4px;
+  padding: ${p => p.theme.spacing(2)};
   font: inherit;
+  border-radius: ${p => p.theme.radii.sm};
+  border: 1px solid ${p => p.theme.colors.grey};
 `;
 
 export const FormGroup = styled.label`
@@ -38,11 +57,17 @@ export const FormButton = styled.button`
   margin: 0 auto;
   min-width: 100px;
   color: ${p => p.theme.colors.black};
-  background-color: ${p => p.theme.colors.background};
-  border-radius: ${p => p.theme.radii.lg};
-  padding: 16px 32px;
+  background-color: ${p => p.theme.colors.blue};
+  border-radius: ${p => p.theme.radii.md};
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: ${p => p.theme.spacing(2)};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: ${p => p.theme.colors.active};
+  }
 `;

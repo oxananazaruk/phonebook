@@ -40,10 +40,10 @@ export const FormButton = styled.button`
   margin: 0 auto;
   min-width: 100px;
   color: ${p => p.theme.colors.black};
-  background-color: ${p => p.theme.colors.gray};
+  background-color: ${p => p.theme.colors.blue};
   border-radius: ${p => p.theme.radii.lg};
   border: none;
-  padding: ${p => p.theme.spacing(4)};
+  padding: ${p => p.theme.spacing(3)};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   font-weight: 500;
@@ -51,6 +51,6 @@ export const FormButton = styled.button`
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: ${p => p.theme.colors.blue};
+    background-color: ${p => p.theme.colors.active};
   }
 `;

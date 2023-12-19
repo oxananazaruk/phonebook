@@ -3,6 +3,8 @@ import { logIn } from '../../redux/auth/operations';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import {
+  IconWrap,
+  LogTitle,
   FormContainer,
   Form,
   Field,
@@ -10,6 +12,7 @@ import {
   ErrorMessage,
   FormButton,
 } from './LogintForm.styled';
+import { CiLock } from 'react-icons/ci';
 
 const formSchema = Yup.object().shape({
   email: Yup.string().min(2, 'Too Short!').required('Required'),
@@ -21,6 +24,15 @@ export const LoginForm = () => {
 
   return (
     <FormContainer>
+      <IconWrap>
+        <CiLock
+          style={{
+            width: '40px',
+            height: '40px',
+          }}
+        />
+      </IconWrap>
+      <LogTitle>Log In</LogTitle>
       <Formik
         initialValues={{ email: '', password: '' }}
         validationSchema={formSchema}

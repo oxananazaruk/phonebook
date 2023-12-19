@@ -16,6 +16,8 @@ const theme = {
     blue: '#0390fc',
     white: '#FFFAFA',
     grey: '#b4ccc7',
+    lightblue: 'rgba(107, 162, 250, 0.30)',
+    active: '#0478d1',
   },
   radii: {
     sm: '4px',
