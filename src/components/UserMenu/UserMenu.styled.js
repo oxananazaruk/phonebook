@@ -7,7 +7,9 @@ export const Wraper = styled.div`
 `;
 
 export const UserName = styled.p`
+  font-size: 24px;
   font-weight: 700;
+  margin: 0;
 `;
 
 export const LogOutBtn = styled.button`

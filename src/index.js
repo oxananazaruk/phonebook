@@ -9,7 +9,7 @@ import { store, persistor } from './redux/store';
 
 const theme = {
   colors: {
-    background: '#F6F6F6',
+    background: 'rgba(207, 234, 255, 0.15)',
     green: '#008000',
     red: '#FF0000',
     black: '#2a2a2a',

@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import {
   FormContainer,
+  TitleForm,
   Form,
   Field,
   FormGroup,
@@ -12,6 +13,7 @@ import {
 } from './ContactForm.styled';
 import { addContact } from '../../redux/operations';
 import { selectContacts } from '../../redux/selectors';
+import { FaPhone } from 'react-icons/fa';
 
 const formSchema = Yup.object().shape({
   name: Yup.string().min(2, 'Too Short!').required('Required'),
@@ -29,6 +31,15 @@ export const ContactForm = () => {
 
   return (
     <FormContainer>
+      <TitleForm>
+        Phonebook{' '}
+        <FaPhone
+          style={{
+            width: '30px',
+            height: '30px',
+          }}
+        />
+      </TitleForm>
       <Formik
         initialValues={{ name: '', number: '' }}
         validationSchema={formSchema}

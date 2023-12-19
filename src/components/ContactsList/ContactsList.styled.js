@@ -4,6 +4,7 @@ export const ContactsWraper = styled.div`
   max-width: 600px;
   padding: 16px 32px;
   margin: 0 auto;
+  min-height: 100%;
 `;
 
 export const List = styled.ul`

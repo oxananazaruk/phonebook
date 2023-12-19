@@ -4,7 +4,6 @@ export const NavigationHeader = styled.header`
   top: 0;
   left: 0;
   position: sticky;
-  margin-bottom: 20px;
   z-index: 1100;
   display: flex;
   min-height: 64px;
@@ -20,5 +19,6 @@ export const NavigationList = styled.ul`
   width: 100%;
   display: flex;
   margin: 0;
+  align-items: center;
   justify-content: space-between;
 `;

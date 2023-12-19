@@ -10,6 +10,13 @@ export const FormContainer = styled.div`
   padding: 16px 32px;
   margin: 0 auto;
 `;
+export const TitleForm = styled.h2`
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0 auto;
+`;
 
 export const Form = styled(FormikForm)`
   display: flex;
