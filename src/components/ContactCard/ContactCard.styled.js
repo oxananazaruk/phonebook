@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const DeleteBtn = styled.button`
   min-width: 60px;
   color: ${p => p.theme.colors.black};
-  background-color: ${p => p.theme.colors.gray};
+  background-color: ${p => p.theme.colors.lightblue};
   border-radius: ${p => p.theme.radii.md};
   border: none;
   padding: ${p => p.theme.spacing(1)};

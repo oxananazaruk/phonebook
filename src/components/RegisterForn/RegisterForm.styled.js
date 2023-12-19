@@ -40,6 +40,7 @@ export const Field = styled(FormikField)`
   font: inherit;
   border-radius: ${p => p.theme.radii.sm};
   border: 1px solid ${p => p.theme.colors.grey};
+  background-color: ${p => p.theme.colors.lightgray};
 `;
 
 export const FormGroup = styled.label`
