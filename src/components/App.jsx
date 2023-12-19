@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { refreshUser } from '../redux/auth/operations';
 import { useAuth } from '../hooks';
 
-const HomePage = lazy(() => import('../pages/Home'));
+const HomePage = lazy(() => import('../pages/HomePage'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));

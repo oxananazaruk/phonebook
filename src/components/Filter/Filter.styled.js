@@ -13,6 +13,8 @@ export const FindGroup = styled.label`
   gap: 4px;
 `;
 export const Findinput = styled.input`
-  padding: 4px;
+  padding: ${p => p.theme.spacing(2)};
   font: inherit;
+  border-radius: ${p => p.theme.radii.sm};
+  border: 1px solid ${p => p.theme.colors.grey};
 `;

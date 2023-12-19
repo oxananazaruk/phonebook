@@ -6,13 +6,13 @@ import { GlobalStyle } from './GlobalStyle';
 
 export const Layout = () => {
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
+    <div>
       <AppBar />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
-          <Toaster position="top-right" reverseOrder={false} />
-          <GlobalStyle/>
+      <Toaster position="top-right" reverseOrder={false} />
+      <GlobalStyle />
     </div>
   );
 };

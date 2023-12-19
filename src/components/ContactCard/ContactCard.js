@@ -1,15 +1,19 @@
 import { useDispatch } from 'react-redux';
+import { RiContactsLine } from 'react-icons/ri';
 import { deleteContact } from '../../redux/operations';
+import { DeleteBtn, ContactWraper } from './ContactCard.styled';
 
 export const ContactCard = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContact(id));
 
   return (
-    <div>
-      <span>{name}: </span>
+    <ContactWraper>
+      <span>
+        <RiContactsLine /> {name}:
+      </span>
       <span>{number} </span>
-      <button onClick={handleDelete}>Delete</button>
-    </div>
+      <DeleteBtn onClick={handleDelete}>Delete</DeleteBtn>
+    </ContactWraper>
   );
 };

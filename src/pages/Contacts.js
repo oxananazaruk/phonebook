@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet';
 import { ContactForm } from '../components/ContactForm/ContactForm';
 import { ContactsList } from '../components/ContactsList/ContactsList';
 import { Filter } from '../components/Filter/Filter';
@@ -10,6 +9,8 @@ import {
   selectContacts,
 } from '../redux/selectors';
 import { fetchContacts } from '../redux/operations';
+import { Loader } from '../components/Loader/Loader';
+import { Error } from '../components/Error/Error';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -23,14 +24,10 @@ export default function Contacts() {
 
   return (
     <div>
-      <h1>Phonebook</h1>
       <ContactForm />
-      <Helmet>
-        <title>Phonebook</title>
-      </Helmet>
       <Filter />
-      {isLoading && !error && <b>Request in progress...</b>}
-      {error && <b>Somesing went wrong! Please, try reload this page.</b>}
+      {isLoading && !error && <Loader />}
+      {error && <Error />}
       {contacts.length > 0 && <ContactsList />}
     </div>
   );

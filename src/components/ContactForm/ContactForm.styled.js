@@ -18,8 +18,10 @@ export const Form = styled(FormikForm)`
 `;
 
 export const Field = styled(FormikField)`
-  padding: 4px;
+  padding: ${p => p.theme.spacing(2)};
   font: inherit;
+  border-radius: ${p => p.theme.radii.sm};
+  border: 1px solid ${p => p.theme.colors.grey};
 `;
 
 export const FormGroup = styled.label`
@@ -38,11 +40,17 @@ export const FormButton = styled.button`
   margin: 0 auto;
   min-width: 100px;
   color: ${p => p.theme.colors.black};
-  background-color: ${p => p.theme.colors.background};
+  background-color: ${p => p.theme.colors.gray};
   border-radius: ${p => p.theme.radii.lg};
-  padding: 16px 32px;
+  border: none;
+  padding: ${p => p.theme.spacing(4)};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: ${p => p.theme.colors.blue};
+  }
 `;

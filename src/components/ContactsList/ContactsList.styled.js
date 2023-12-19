@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
+export const ContactsWraper = styled.div`
+  max-width: 600px;
+  padding: 16px 32px;
+  margin: 0 auto;
+`;
+
 export const List = styled.ul`
-  list-style: square;
-  display: flex;
-  gap: ${p => p.theme.spacing(2)};
-  flex-direction: column;
-  align-items: center;
+  list-style: none;
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
 `;
 
 export const ListItem = styled.li`

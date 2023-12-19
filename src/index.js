@@ -13,8 +13,9 @@ const theme = {
     green: '#008000',
     red: '#FF0000',
     black: '#2a2a2a',
-    blue: '#87CEEB',
+    blue: '#0390fc',
     white: '#FFFAFA',
+    grey: '#b4ccc7',
   },
   radii: {
     sm: '4px',
