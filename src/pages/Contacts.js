@@ -27,7 +27,11 @@ export default function Contacts() {
       <ContactForm />
       <Filter />
       {isLoading && !error && <Loader />}
-      {error && <Error />}
+      {error && (
+        <Error>
+          Oops! Something went wrong! Please try reloading this page!
+        </Error>
+      )}
       {contacts.length > 0 && <ContactsList />}
     </div>
   );

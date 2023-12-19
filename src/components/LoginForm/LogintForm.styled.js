@@ -3,6 +3,7 @@ import {
   Field as FormikField,
   ErrorMessage as FormikError,
 } from 'formik';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const IconWrap = styled.div`
@@ -70,4 +71,10 @@ export const FormButton = styled.button`
   &:hover {
     background-color: ${p => p.theme.colors.active};
   }
+`;
+
+export const MainLink = styled(NavLink)`
+  color: ${p => p.theme.colors.blue};
+  font-size: 14px;
+  font-weight: 500;
 `;

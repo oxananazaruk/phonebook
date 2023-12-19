@@ -1,11 +1,9 @@
 import { Warning, ErrorWraper } from './Error.styled';
 
-export const Error = () => {
+export const Error = ({ children }) => {
   return (
     <ErrorWraper>
-      <Warning>
-        Oops! Something went wrong! Please try reloading this page!
-      </Warning>
+      <Warning>{children}</Warning>
     </ErrorWraper>
   );
 };
