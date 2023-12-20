@@ -11,7 +11,7 @@ export const ContactCard = ({ contact: { id, name, number } }) => {
   return (
     <ContactWraper>
       <span>
-        <RiContactsLine /> {name}:
+        <RiContactsLine /> {name}
       </span>
       <span>{number} </span>
       <DeleteBtn onClick={handleDelete}>
