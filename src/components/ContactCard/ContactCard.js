@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { RiContactsLine } from 'react-icons/ri';
-import { deleteContact } from '../../redux/operations';
+import { deleteContact } from '../../redux/contacts/operations';
 import { DeleteBtn, ContactWraper } from './ContactCard.styled';
 import { MdOutlineDeleteForever } from 'react-icons/md';
 

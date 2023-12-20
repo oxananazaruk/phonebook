@@ -11,8 +11,8 @@ import {
   ErrorMessage,
   FormButton,
 } from './ContactForm.styled';
-import { addContact } from '../../redux/operations';
-import { selectContacts } from '../../redux/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import { selectContacts } from '../../redux/contacts/selectors';
 import { FaPhone } from 'react-icons/fa';
 
 const formSchema = Yup.object().shape({

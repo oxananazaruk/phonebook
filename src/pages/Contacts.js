@@ -7,8 +7,8 @@ import {
   selectIsLoading,
   selectError,
   selectContacts,
-} from '../redux/selectors';
-import { fetchContacts } from '../redux/operations';
+} from '../redux/contacts/selectors';
+import { fetchContacts } from '../redux/contacts/operations';
 import { Loader } from '../components/Loader/Loader';
 import { Error } from '../components/Error/Error';
 
